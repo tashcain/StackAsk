@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2 class="mb-4 text-center">Post Question</h2>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Label</label>
+    <input
+      type="Text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Title"
+      name="title"
+      [(ngModel)]="title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label"
+      >Question Code</label
+    >
+    <input
+      type="Text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Question Code"
+      name="questionCode"
+      [(ngModel)]="questionCode"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Question </label>
+    <textarea
+      rows="6"
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Write your question here..."
+      name="description"
+      [(ngModel)]="description"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <button type="button" (click)="onSubmit()" class="btn btn-primary mt-4">
+      Submit
+    </button>
+  </div>
+</div>

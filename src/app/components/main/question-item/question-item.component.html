@@ -1,0 +1,30 @@
+<div class="task">
+  <div class="ques">
+    <h2 class="mt-1">Question:</h2>
+    <p>Code : {{ question.questionCode }}</p>
+  </div>
+  <div [ngStyle]="{ display: 'flex' }">
+    <h2 [ngStyle]="{ fontWeight: '500', textAlign: 'center' }">
+      {{ question.label }}
+    </h2>
+  </div>
+
+  <div>
+    <h3 [ngStyle]="{ fontSize: '22px' }">Q: {{ question.question }}</h3>
+  </div>
+  <div class="foot">
+    <div>
+      <button
+        mat-raised-button
+        (click)="onNavigate(question.questionCode)"
+        color="primary"
+      >
+        Read
+      </button>
+    </div>
+    <div>
+      <p>{{ question.date }}</p>
+      <p>Posted by {{ question.username }}</p>
+    </div>
+  </div>
+</div>

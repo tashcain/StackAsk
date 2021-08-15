@@ -1,0 +1,39 @@
+.searchBar {
+  background: url("../../../../assets/image/search.jpg") no-repeat;
+
+  background-size: cover;
+
+  height: 100%;
+  width: 100%;
+}
+
+.inputdiv {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+select[type="text"] {
+  width: 15%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}

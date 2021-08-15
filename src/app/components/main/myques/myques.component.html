@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<h1 class="text-center mt-4 mb-4">Your Posted Questions</h1>
+<div class="myques">
+  <app-question-item
+    *ngFor="let question of questions"
+    [question]="question"
+  ></app-question-item>
+</div>

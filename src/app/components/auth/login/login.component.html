@@ -1,0 +1,33 @@
+<h2 class="mb-4 text-center">Login</h2>
+
+<div class="mb-3">
+  <label for="email" class="form-label">Username </label>
+  <input
+    type="text"
+    class="form-control"
+    name="username"
+    [(ngModel)]="username"
+    id="username"
+    placeholder="Username"
+  />
+</div>
+<div class="mb-3">
+  <label for="password" class="form-label">Password</label>
+  <input
+    type="password"
+    class="form-control"
+    id="password"
+    name="password"
+    [(ngModel)]="password"
+    placeholder="password"
+  />
+
+  <button type="button" (click)="onSubmit()" class="btn btn-primary mt-4">
+    Login</button
+  ><br />
+
+  <span
+    >Don't have an account ?
+    <a mat-icon-button routerLink="/register">Register</a></span
+  >
+</div>

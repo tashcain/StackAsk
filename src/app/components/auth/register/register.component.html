@@ -1,0 +1,47 @@
+<h1 class="text-center mt-5">StackAsk</h1>
+
+<div class="container">
+  <h2 class="mb-4 text-center">Register</h2>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email </label>
+    <input
+      name="email"
+      [(ngModel)]="email"
+      type="email"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">User Name</label>
+    <input
+      type="Text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="user name"
+      name="username"
+      [(ngModel)]="username"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="password"
+      name="password"
+      [(ngModel)]="password"
+    />
+
+    <button type="button" (click)="onSubmit()" class="btn btn-primary mt-4">
+      Register
+    </button>
+    <br />
+    <span
+      >Already have an account ?
+      <a mat-icon-button routerLink="/login">Login</a></span
+    >
+  </div>
+</div>

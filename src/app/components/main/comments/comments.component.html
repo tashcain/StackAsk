@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+
+<div class="commentcont">
+  <div class="question m-4 p-4">
+    <h1>Question: {{ question }}</h1>
+  </div>
+  <div class="p-4">
+    <h1>Comments</h1>
+    <app-comm-item
+      *ngFor="let comment of commentsArr"
+      [comment]="comment"
+    ></app-comm-item>
+  </div>
+
+  <div class="searchBar">
+    <div class="inputdiv">
+      <input
+        type="text"
+        name="comment"
+        [(ngModel)]="comment"
+        placeholder="Write your comment here..."
+      />
+      <button
+        class="ml-2"
+        mat-raised-button
+        (click)="onSubmit()"
+        color="primary"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+.question {
+  background: wheat;
+  display: flex;
+}
+
+.searchBar {
+  height: auto;
+  width: 100%;
+}
+
+.inputdiv {
+  width: 100%;
+  position: relative;
+
+  bottom: 0;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+
+.commentcont {
+  padding-left: 10%;
+  padding-right: 10%;
+}

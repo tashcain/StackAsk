@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<!-- <app-questions></app-questions> -->
+<div *ngIf="!showList" class="searchBar">
+  <div class="inputdiv">
+    <select type="text" name="reqType" [(ngModel)]="reqType">
+      <option value="0">Select</option>
+      <option value="1">Label</option>
+      <option value="2">Question</option>
+      <option value="3">Question Code</option>
+      <option value="4">Username</option>
+      <option value="5">Date (yyyy-mm-dd)</option>
+    </select>
+    <input
+      type="text"
+      name="title"
+      [(ngModel)]="title"
+      placeholder="Search Questions"
+    />
+    <br />
+    <button mat-raised-button (click)="onSubmit()" color="primary">
+      Search
+    </button>
+  </div>
+</div>
+<div *ngIf="showList">
+  <div>
+    <button mat-stroked-button class="m-3" (click)="onBack()" color="primary">
+      Back
+    </button>
+  </div>
+  <app-question-item
+    *ngFor="let question of questions"
+    [question]="question"
+  ></app-question-item>
+</div>
