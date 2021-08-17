@@ -9,10 +9,22 @@ import { Question } from '../../../questions';
 })
 export class QuestionItemComponent implements OnInit {
   @Input() question: Question;
+  Qmap: any;
 
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    let qmapp = {
+      '0': 'Programming',
+      '1': 'Technology',
+      '2': 'Games',
+      '3': 'health',
+      '4': 'News',
+      '5': 'Other',
+    };
+
+    this.Qmap = qmapp;
+  }
 
   onNavigate(id: any) {
     this.router.navigate(['/question', id]);

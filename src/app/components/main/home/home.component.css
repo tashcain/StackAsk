@@ -7,9 +7,25 @@
   width: 100%;
 }
 
+.quesa {
+  margin-top: 7%;
+}
+
+.errormsg {
+  display: flex;
+  justify-content: center;
+}
+
+.errormsg h3 {
+  background-color: whitesmoke;
+  color: red;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .inputdiv {
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

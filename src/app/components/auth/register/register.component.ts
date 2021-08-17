@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
         alert('You have been registered successfully login to continue');
       },
       (error) => {
-        alert('server error');
+        alert('User is already registered');
         console.log(error);
       }
     );

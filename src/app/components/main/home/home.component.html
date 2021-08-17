@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <!-- <app-questions></app-questions> -->
-<div *ngIf="!showList" class="searchBar">
-  <div class="inputdiv">
+<div class="searchBar">
+  <div id="inpidiv" class="inputdiv">
     <select type="text" name="reqType" [(ngModel)]="reqType">
       <option value="0">Select</option>
       <option value="1">Label</option>
@@ -17,19 +17,25 @@
       placeholder="Search Questions"
     />
     <br />
+    <div class="errormsg" *ngIf="showError">
+      <h3>{{ errorMsg }}</h3>
+    </div>
     <button mat-raised-button (click)="onSubmit()" color="primary">
       Search
     </button>
   </div>
-</div>
-<div *ngIf="showList">
-  <div>
+  <!-- </div>
+<div> -->
+  <!-- <div>
     <button mat-stroked-button class="m-3" (click)="onBack()" color="primary">
       Back
     </button>
+  </div> -->
+
+  <div class="quesa" *ngIf="showList">
+    <app-question-item
+      *ngFor="let question of questions"
+      [question]="question"
+    ></app-question-item>
   </div>
-  <app-question-item
-    *ngFor="let question of questions"
-    [question]="question"
-  ></app-question-item>
 </div>

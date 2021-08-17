@@ -16,14 +16,28 @@
     <label for="exampleFormControlInput1" class="form-label"
       >Question Code</label
     >
-    <input
-      type="Text"
+    <!-- <input
+      type="select"
       class="form-control"
       id="exampleFormControlInput1"
       placeholder="Question Code"
       name="questionCode"
       [(ngModel)]="questionCode"
-    />
+    /> -->
+    <select
+      class="form-control"
+      id="exampleFormControlInput1"
+      name="questionCode"
+      placeholder="Question Code"
+      [(ngModel)]="questionCode"
+    >
+      <option value="0">Programming</option>
+      <option value="1">Technology</option>
+      <option value="2">Gaming</option>
+      <option value="3">Health</option>
+      <option value="4">News</option>
+      <option value="5">Other</option>
+    </select>
   </div>
 
   <div class="mb-3">
