@@ -24,7 +24,7 @@ export class CommentsComponent implements OnInit {
     let id = parseInt(this.route.snapshot.paramMap.get('id'));
     this.questionId = id;
     console.log(id);
-    this.questionService.getaQuestion(id).subscribe(
+    this.questionService.getQuesbyId(id).subscribe(
       (res) => {
         this.question = res[0].question;
       },
